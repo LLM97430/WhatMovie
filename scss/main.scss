@@ -1,2 +1,47 @@
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 @import "custom";
+
+.great-vibes-regular {
+   font-family: "Great Vibes", cursive;
+   font-weight: 400;
+   font-style: normal;
+   color: #9F8700;
+}
+
+.rubik-iso-regular {
+   font-family: "Rubik Iso", system-ui;
+   font-weight: 400;
+   font-style: normal;
+   color: #9F8700;
+}
+
+
+html {
+   position: relative;
+   min-height: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+main {
+   height:100%;
+   overflow: auto;
+}
+
+.hero-scene {
+   background-image: url(../assets/hero-scene.jpg);
+   background-size : cover ;
+}
+
+@media screen and (max-width: 768px) {
+   .hero-scene {
+      background-position: 80% center; /* Modifiez les valeurs selon vos besoins */
+   }
+}
+
+footer.footer {
+   position: absolute;
+   padding: 15px;
+   bottom: 0;
+   width: 100%;
+}

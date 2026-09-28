@@ -4,9 +4,11 @@
 // Include any default variable overrides here (though functions won't be available)
 $body-bg: #0c0000;
 $body-color: #9F8700;
-$primary: #990000;
+$primary: #99000089;
 $font-family-sans-serif: "Montserrat", sans-serif !default;
 $font-family-serif: "Hind Madurai", serif !default;
+$enable-grid-classes: false;
+$enable-cssgrid: true;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 

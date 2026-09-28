@@ -34,12 +34,6 @@ main {
    background-size : cover ;
 }
 
-@media screen and (max-width: 768px) {
-   .hero-scene {
-      background-position: 80% center; /* Modifiez les valeurs selon vos besoins */
-   }
-}
-
 footer.footer {
    position: absolute;
    padding: 15px;
@@ -79,5 +73,24 @@ footer.footer {
 
    img{
       transition: all 0.3s;
+   }
+}
+
+
+@media screen and (max-width: 768px) {
+   .hero-scene {
+      background-position: 80% center; /* Modifiez les valeurs selon vos besoins */
+   }
+
+   .image-card{
+      position: relative;
+
+      .bookmark-btn{
+         position: absolute;
+         top:20%;
+         left: 75%;
+         transform: translate(-20%, -75%);
+         transition: all 0.2s;
+      }
    }
 }

@@ -1,17 +1,21 @@
-<h1>Se connecter</h1>
-<form>
-   <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+<div class="hero-scene py-5 vh-100">
+   <div class="hero-scene-content mx-3">
+      <h1 class="text-center rubik-iso-regular">Sign in <span class="d-none d-md-block">to discover your tailor-made suggestions</span></h1>
    </div>
-   <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-   </div>
-   <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-   </div>
-   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+   <form class="d-flex flex-column align-items-center">
+      <div class="mt-5 mb-3">
+         <label for="email" name="email" class="form-label">Email address</label>
+         <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="johndoe@mail.com">
+      </div>
+      <div class="mb-3">
+         <label for="password" name="password" class="form-label">Password</label>
+         <input type="password" class="form-control" id="password" placeholder="**********">
+      </div>
+      <div class="mb-3 form-check">
+         <input type="checkbox" class="form-check-input" name="remember-check" id="remember-check">
+         <label class="form-check-label" for="remember-check">Remember me</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign in to your WhatMovie?! account</button>
+   </form>
+</div>

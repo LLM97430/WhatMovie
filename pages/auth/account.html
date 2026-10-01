@@ -1,0 +1,56 @@
+<div class="hero-scene py-5 vh-100">
+   <div class="hero-scene-content mx-3">
+      <h1 class="text-center rubik-iso-regular">Your account</h1>
+   </div>
+
+   <div class="container d-flex flex-column align-items-center">
+      <form class="account-form">
+         <div class="form-floating mt-5 mb-3">
+            <label for="firstnameInput" >Firstname</label>
+            <input type="text" class="form-control" id="firstnameInput" name="firstnameInput" placeholder="Firstname">
+         </div>
+         <div class="form-floating mb-3">
+            <label for="nameInput">Name</label>
+            <input type="text" class="form-control" id="nameInput" name="nameInput" placeholder="Name">
+         </div>
+         <fieldset>
+            <legend>Choose your favorite platforms<span class="d-none d-md-block"> To receive personnalized suggestions.</span></legend>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="netflix" id="netflix">
+            <label class="form-check-label" for="netflix">
+               Netflix
+            </label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="disney+" id="disney+">
+            <label class="form-check-label" for="disney+">
+               Disney+
+            </label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="canal+" id="canal+">
+            <label class="form-check-label" for="canal+">
+               Canal+
+            </label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="amazonPrime" id="amazonPrime">
+            <label class="form-check-label" for="amazonPrime">
+               Amazon Prime
+            </label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="hboMax" id="hboMax">
+            <label class="form-check-label" for="hboMax">
+               HBO Max
+            </label>
+            </div>
+         </fieldset>
+         <button type="submit" class="btn btn-primary">Update your details</button>
+         <button type="button" class="btn btn-danger">Delete your account</button>
+      </form>
+   </div>
+   <div class="text-center pt-3">
+      <a href="/editPassword">Click here to update your password.</a>
+   </div>
+</div>

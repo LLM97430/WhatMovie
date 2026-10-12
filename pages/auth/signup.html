@@ -16,14 +16,26 @@
          <div class="form-floating mt-5 mb-3">
             <input type="email" class="form-control" id="emailInput" aria-describedby="email" placeholder="Email">
             <label for="emailInput" name="email" class="form-label">Email</label>
+            <div class="invalid-feedback">
+               Your email format is incorrect
+            </div>
          </div>
          <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="passwordInput" >
+            <input type="password" class="form-control" id="passwordInput">
             <label for="passwordInput" name="password" class="form-label">Password</label>
+            <div class="invalid-feedback">
+               Your password should contain at least eight characters, including at least one capital letter, at least one lowercase letter, at least one number, at least one special character.
+            </div>
+            <div class="valid-feedback">
+               Your password is strong enough.
+            </div>
          </div>
          <div class="form-floating mb-3">
             <input type="password" class="form-control" id="validatePasswordInput" >
             <label for="validatePasswordInput" name="password" class="form-label">Confirm your password</label>
+            <div class="invalid-feedback">
+               The validation is different from the password.
+            </div>
          </div>
          <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" name="remember-check" id="remember-check">

@@ -2,7 +2,9 @@ const tokenCookieName = "accesstoken";
 const roleCookieName = "role";
 const signoutButton = document.getElementById("signout-btn");
 
+
 signoutButton.addEventListener("click", signout);
+
 
 function setToken(token) {
    setCookie(tokenCookieName, token, 7);

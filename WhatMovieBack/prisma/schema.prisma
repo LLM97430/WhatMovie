@@ -6,3 +6,78 @@ generator client {
   provider = "prisma-client"
   output   = "../node_modules/@prisma/client"
 }
+
+model User {
+  id            String         @id @default(uuid())
+  email         String         @unique @db.VarChar(255)
+  /**
+   * password
+   */
+  firstName     String         @map("first_name")
+  name          String
+  active        Boolean        @default(true)
+  createdAt     DateTime       @default(now()) @map("created_at") @db.Timestamptz
+  subscriptions Subscription[]
+  watchlist     Watchlist[]
+
+  @@map("users")
+}
+
+model Subscription {
+  id        Int       @id @default(autoincrement())
+  type      String
+  price     Decimal?  @db.Decimal(10, 2)
+  startDate DateTime  @default(now()) @map("start_date") @db.Timestamptz
+  endDate   DateTime? @default(now()) @map("end_date") @db.Timestamptz
+  active    Boolean   @default(true)
+  userId    String    @map("user_id")
+  user      User      @relation(fields: [userId], references: [id])
+
+  @@map("subscriptions")
+}
+
+model Watchlist {
+  id          Int     @id @default(autoincrement())
+  tmdbMediaId Int     @map("tmdb_media_id")
+  status      String
+  favorite    Boolean @default(false)
+  progress    String? @db.VarChar(250)
+  rating      Int?    @db.SmallInt()
+  comment     String? @db.VarChar(250)
+  userId      String  @map("user_id")
+  user        User    @relation(fields: [userId], references: [id])
+
+  @@map("watchlists")
+}
+
+model UserPlatform {
+  userId         Int @map("user_id")
+  tmdbPlatformId Int @map("tmdb_platform_id")
+
+  @@id([userId, tmdbPlatformId])
+  @@map("user_platforms")
+}
+
+model UserGenre {
+  userId      Int @map("user_id")
+  tmdbGenreId Int @map("tmdb_genre_id")
+
+  @@id([userId, tmdbGenreId])
+  @@map("user_genres")
+}
+
+model WatchlistPlatform {
+  watchlistId    Int @map("watchlist_id")
+  tmdbPlatformId Int @map("tmdb_platform_id")
+
+  @@id([watchlistId, tmdbPlatformId])
+  @@map("watchlist_platforms")
+}
+
+model MediaGenre {
+  tmdbMediaId Int @map("tmdb_media_id")
+  tmdbGenreId Int @map("tmdb_genre_id")
+
+  @@id([tmdbMediaId, tmdbGenreId])
+  @@map("media_genres")
+}
